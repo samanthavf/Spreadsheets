@@ -1,0 +1,58 @@
+.aba{
+    position: absolute;
+    width: 23%;
+    height: 100.5vh;
+    left: -1px;
+    bottom: 1px;
+    background-color:  #8A9A5B ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+ul {
+    list-style-type: none; 
+    overflow: hidden;
+    margin-top: 35%;
+    margin-left: 15px;
+  }
+  
+
+  li a {
+    display: block;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.4s ease;
+
+  }
+
+  li a:hover {
+    background-color:   #6B7B47;
+}
+
+.aba-icons{
+    position: absolute;
+    left: 14px;
+    margin-top: 3%;
+    left: 15px;
+    width: 34px;
+    height: 34px;
+}
+
+#logo{
+    position: absolute;
+    top: 30px;
+    width: 60px;
+    height: 60px;
+    left: 10%;
+}
+
+#logo-name{
+    position: absolute;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    top: 2%;
+    left: 29%;
+}
