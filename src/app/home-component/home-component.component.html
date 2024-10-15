@@ -1,5 +1,28 @@
 <div class="background">
 
+    <div class="back-image">
+        <img src="assets/spreadsheet-back.png" alt="back-image" width="500px" height="550px" id="fundoImg">
+    </div>
+
+    <div class="apresentation" *ngIf="apresentacao">
+  <h1 id="titulo">Apresentando Spreadsheets: Sua Ferramenta Ideal para Criar Orçamentos e Gerar PDFs</h1>
+
+  <p>Spreadsheets é uma aplicação inovadora e intuitiva, projetada para simplificar a criação de orçamentos de forma rápida e eficiente. <br> 
+    Com sua interface amigável, você pode montar planilhas personalizadas para calcular e organizar todos os seus dados financeiros em um <br> 
+    só lugar. Além disso, com apenas alguns cliques, transforme suas planilhas em arquivos PDF profissionais, prontos para serem compartilhados <br> 
+    com clientes, parceiros ou membros da equipe.</p>
+
+  <h2 class="funcionalidades">Principais Funcionalidades:</h2>
+ 
+  <ul class="funcionalidade">
+    <li ><strong>Criação de Planilhas Personalizadas:</strong> Organize seus dados com facilidade e controle seus custos de forma detalhada.</li>
+    <li ><strong>Geração de PDFs Instantânea:</strong> Converta suas planilhas em PDFs de alta qualidade, prontos para envio ou arquivamento.</li>
+    <li ><strong>Interface Simples e Intuitiva:</strong> Uma experiência sem complicações, mesmo para usuários com pouca familiaridade com ferramentas de planilhas.</li>
+    <li ><strong>Compartilhamento Fácil:</strong> Distribua seus orçamentos em formato PDF diretamente a partir da aplicação.</li>
+</ul>
+  <p class="rodape">Spreadsheets é a solução perfeita para quem precisa gerenciar orçamentos de maneira prática e eficiente, mantendo a qualidade e a organização que seus projetos merecem.</p>
+    </div>
+
     <div class="aba">
         <div class="logo">
             <img src="assets/sheet.png" alt="logo" id="logo">
@@ -8,11 +31,38 @@
 
         <ul>
             <img src="assets/add.png" alt="image-add" class="aba-icons">
-            <li><a href="#add">Adicionar</a></li>
+            <li><a routerLink="/add" (click)="planilhas()">Planilha</a></li>
             <img src="assets/brush.png" alt="image-style" class="aba-icons">
-            <li><a href="#style">Estilizar</a></li>
+            <li><a routerLink="/style">Estilizar</a></li>
         </ul>
 
     </div>
+      
+
+    <div class="sheet-container" *ngIf="tabela">
+
+
+        <div class="button-group">
+            <button (click)="addRow()" class="btn btn-success">Adicionar Linha</button>
+            <button (click)="addColumn()" class="btn btn-success">Adicionar Coluna</button>
+            <button (click)="removeRow()" class="btn btn-danger">Remover Linha</button>
+            <button (click)="removeColumn()" class="btn btn-danger">Remover Coluna</button>
+            <button (click)="downloadPDF()" class="btn btn-warning">Salvar em PDF</button>
+        </div>
+
+        <div class="container-tabela">
+
+          <table class="tabela">
+            <tr *ngFor="let row of rows">
+              <td *ngFor="let cell of row">
+                <input [(ngModel)]="cell.value" />
+              </td>
+            </tr>
+          </table>
+
+        </div>
+      
+      </div>
+      
 
 </div>
