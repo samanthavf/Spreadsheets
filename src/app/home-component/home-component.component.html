@@ -47,20 +47,21 @@
             <button (click)="addColumn()" class="btn btn-success">Adicionar Coluna</button>
             <button (click)="removeRow()" class="btn btn-danger">Remover Linha</button>
             <button (click)="removeColumn()" class="btn btn-danger">Remover Coluna</button>
-            <button (click)="downloadPDF()" class="btn btn-warning">Salvar em PDF</button>
+            <button (click)="downloadPDF()" class="btn btn-warning" id="pdf">PDF</button>
         </div>
 
         <div class="container-tabela">
 
           <table class="tabela">
-            <tr *ngFor="let row of rows">
-              <td *ngFor="let cell of row">
+            <tr *ngFor="let row of rows; let rowIndex = index">
+              <td *ngFor="let cell of row; let colIndex = index" [ngClass]="{'highlight': rowIndex === 0}">
                 <input [(ngModel)]="cell.value" />
               </td>
             </tr>
           </table>
-
         </div>
+
+        <button (click)="Salvar()" class="btn btn-success" id="salvar">Salvar planilha</button>
       
       </div>
       

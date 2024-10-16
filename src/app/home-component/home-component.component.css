@@ -119,14 +119,30 @@ h1,h2, strong{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
+#salvar{
+    position: absolute;
+    margin-top: 44%;
+    left: 58%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
 .container-tabela{
     position: absolute;
     background-color: aliceblue;
     margin-top: 3%;
     width: 62%;
-    height: 85vh;
+    height: 75vh;
     overflow: scroll;
     left: 30%;
     margin-top: 7%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
+
+#pdf{
+    color: white;
+}
+
+.highlight {
+    background-color: yellow;
+  }
+  

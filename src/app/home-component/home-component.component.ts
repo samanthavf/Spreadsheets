@@ -50,12 +50,23 @@ planilhas() {
   this.tabela = true;
   }
 
+  Salvar(){
+    const tabelaData = this.rows.map(row => row.map(cell => cell.value));
+    localStorage.setItem('tabelaData', JSON.stringify(tabelaData));
+    alert('Planilha salva')
+    console.log('Dados salvos no localStorage:', tabelaData);
+  }
+
   downloadPDF() {
     const doc = new jsPDF();
-    const table = document.querySelector('table');
+    const table = document.querySelector('.container-tabela');
     if (table) {
-      doc.autoTable({ html: table });
-      doc.save('planilha.pdf');
+      const tempTable = table.querySelector('table');
+
+      if (tempTable) {
+        doc.autoTable({ html: tempTable });
+        doc.save('planilha.pdf');
+      }
     }
   }
 }
