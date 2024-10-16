@@ -4,7 +4,7 @@
     height: 100.5vh;
     left: -1px;
     bottom: 1px;
-    background-color:  #8A9A5B ;
+    background-color:  rgba(138, 154, 91, 0.7);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
@@ -30,14 +30,14 @@ ul {
   }
 
   li a:hover {
-    background-color: #6B7B47;
+    color: white;
+    background-color: rgba(107, 123, 71, 0.5);
 }
 
 .aba-icons{
     position: absolute;
-    left: 14px;
     margin-top: 3%;
-    left: 15px;
+    left: 10px;
     width: 34px;
     height: 34px;
 }
@@ -54,8 +54,8 @@ ul {
     position: absolute;
     color: white;
     font-family: 'Poppins', sans-serif;
-    margin-top: 15%;
-    left: 29%;
+    margin-top: 14%;
+    left: 27%;
 }
 
 .apresentation{
@@ -116,7 +116,6 @@ h1,h2, strong{
     gap: 10px; 
     left: 40%;
     margin-top: 4%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 #salvar{
