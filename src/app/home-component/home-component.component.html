@@ -53,8 +53,8 @@
         <div class="container-tabela">
 
           <table class="tabela">
-            <tr *ngFor="let row of rows; let rowIndex = index">
-              <td *ngFor="let cell of row; let colIndex = index" [ngClass]="{'highlight': rowIndex === 0}">
+            <tr *ngFor="let row of rows">
+              <td *ngFor="let cell of row">
                 <input [(ngModel)]="cell.value" />
               </td>
             </tr>

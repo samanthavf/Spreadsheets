@@ -51,22 +51,31 @@ planilhas() {
   }
 
   Salvar(){
-    const tabelaData = this.rows.map(row => row.map(cell => cell.value));
-    localStorage.setItem('tabelaData', JSON.stringify(tabelaData));
-    alert('Planilha salva')
-    console.log('Dados salvos no localStorage:', tabelaData);
+    const tabelaData: string[][] = this.rows.map((row: Cell[]) =>
+    row.map((cell: Cell) => cell.value)
+  );
+  localStorage.setItem('tabelaData', JSON.stringify(tabelaData));
+  alert('Planilha salva');
+  console.log('Dados salvos no localStorage:', tabelaData);
   }
 
   downloadPDF() {
     const doc = new jsPDF();
-    const table = document.querySelector('.container-tabela');
-    if (table) {
-      const tempTable = table.querySelector('table');
-
-      if (tempTable) {
-        doc.autoTable({ html: tempTable });
-        doc.save('planilha.pdf');
-      }
+    const tabelaData = localStorage.getItem('tabelaData');
+    if (tabelaData) {
+      const rows: string[][] = JSON.parse(tabelaData);
+      const formattedData = rows.map((row: string[]) =>
+        row.map((cell: string) => cell || '')
+      );
+  
+      doc.autoTable({
+        head: [formattedData[0]], // Cabeçalho da tabela (primeira linha)
+        body: formattedData.slice(1), // Corpo da tabela (resto das linhas)
+      });
+      doc.save('planilha.pdf');
+    } else {
+      console.error('Nenhuma tabela encontrada no localStorage.');
+    }
     }
   }
-}
+
