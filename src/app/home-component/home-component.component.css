@@ -130,7 +130,7 @@ h2{
 
 #salvar{
     position: absolute;
-    margin-top: 44%;
+    margin-top: 43%;
     left: 58%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
@@ -139,7 +139,7 @@ h2{
     position: absolute;
     background-color: aliceblue;
     width: 62%;
-    height: 80vh;
+    height: 75vh;
     overflow: scroll;
     left: 30%;
     margin-top: 5%;
