@@ -1,27 +1,48 @@
-# Spreadsheets
+# 📊 Spreadsheets App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.4.
+Uma aplicação web desenvolvida em Angular para criação e gerenciamento de planilhas personalizadas. As planilhas podem ser preenchidas diretamente no navegador e exportadas como arquivos PDF com apenas um clique.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Descrição
 
-## Code scaffolding
+O **Spreadsheets App** é uma solução leve e prática para manipulação de dados em formato de tabela. Ideal para quem precisa de agilidade na organização de informações sem depender de softwares externos como Excel ou Google Sheets.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 🧩 Funcionalidades
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- 🧱 Criação de planilhas dinâmicas  
+- ✏️ Edição de células diretamente no navegador  
+- 💾 Salvamento automático via `localStorage`  
+- 📄 Exportação da planilha em formato **PDF**  
+- 🎨 Interface moderna e responsiva  
+- ⚙️ Estrutura modular com componentes Angular  
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🛠️ Tecnologias utilizadas
 
-## Running end-to-end tests
+- [Angular CLI 18.2.4](https://angular.io/)  
+- [Bootstrap 5](https://getbootstrap.com/)  
+- HTML5 e CSS3  
+- TypeScript  
+- [jsPDF](https://github.com/parallax/jsPDF) (para exportar PDF)  
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## 📦 Instalação
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+# 1. Clone o repositório
+git clone https://github.com/samanthavf/Spreadsheets.git
+
+# 2. Acesse a pasta do projeto
+cd Spreadsheets
+
+# 3. Instale as dependências
+npm install
+
+# 4. Inicie o servidor de desenvolvimento
+ng serve
+
