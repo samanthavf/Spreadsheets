@@ -33,16 +33,22 @@ O **Spreadsheets App** é uma solução leve e prática para manipulação de da
 
 ## 📦 Instalação
 
+ 1. Clone o repositório
 ```bash
-# 1. Clone o repositório
 git clone https://github.com/samanthavf/Spreadsheets.git
+```
 
-# 2. Acesse a pasta do projeto
+ 2. Acesse a pasta do projeto
+```bash
 cd Spreadsheets
+```
 
-# 3. Instale as dependências
+ 3. Instale as dependências
+```bash
 npm install
+```
 
-# 4. Inicie o servidor de desenvolvimento
+ 4. Inicie o servidor de desenvolvimento
+```bash
 ng serve
-
+```
